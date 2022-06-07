@@ -16,6 +16,12 @@
             <img src="{{ asset('images/logo.png') }}" alt="Logo" class="nav__brand">
             <ul class="nav__menu">
                 <li class="nav__item"><a href="https://itunes.apple.com/us/app/online-florist-floweradvisor/id1185232806" class="nav__link" target="_blank"><i class="fa-brands fa-apple fa-2xl"></i></a></li>
+                <li class="nav__item">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button type="submit" class="button__logout">Logout</button>
+                    </form>
+                </li>
             </ul>
         </nav>
         <div class="main__content">
